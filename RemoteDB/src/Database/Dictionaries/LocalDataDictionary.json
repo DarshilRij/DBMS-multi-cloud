@@ -1,0 +1,244 @@
+{
+    "DatabaseLocation": "REMOTE",
+    "TableDetails": [
+    {
+        "TableName": "T_order_items",
+        "ColumnDetails": [
+            {
+                "ColumnName": "order_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": "Y"
+            },
+            {
+                "ColumnName": "order_item_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "seller_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "shipping_limit_date",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "price",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "freight_value",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "order_id",
+                "pkColumnName": "order_id",
+                "pkTableName": "T_orders"
+            },
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "seller_id",
+                "pkColumnName": "seller_id",
+                "pkTableName": "T_sellers"
+            },
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "product_id",
+                "pkColumnName": "product_id",
+                "pkTableName": "T_products"
+            }
+
+
+        ]
+
+    },
+    {
+        "TableName": "T_order_payments",
+        "ColumnDetails": [
+            {
+                "ColumnName": "order_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "",
+                "FK": "Y"
+            },
+            {
+                "ColumnName": "payment_sequential",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "payment_type",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "payment_installments",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "payment_value",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "order_id",
+                "pkColumnName": "order_id",
+                "pkTableName": "T_orders"
+            }
+        ]
+
+    },
+    {
+        "TableName": "T_orders",
+        "ColumnDetails": [
+            {
+                "ColumnName": "order_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "Y",
+                "FK": ""
+            },
+            {
+                "ColumnName": "customer_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "",
+                "FK": "Y"
+            },
+            {
+                "ColumnName": "order_status",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_purchase_timestamp",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_approved_at",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_delivered_carrier_date",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_delivered_customer_date",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_estimated_delivery_date",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "customer_id",
+                "pkColumnName": "customer_id",
+                "pkTableName": "T_customers"
+            }
+        ]
+
+    },
+    {
+        "TableName": "T_products",
+        "ColumnDetails": [
+            {
+                "ColumnName": "product_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "Y",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_category_name",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_name_lenght",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_description_lenght",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_photos_qty",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_weight_g",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_length_cm",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_height_cm",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "product_width_cm",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+
+
+        ],
+        "Constraints":[]
+    }
+]
+}

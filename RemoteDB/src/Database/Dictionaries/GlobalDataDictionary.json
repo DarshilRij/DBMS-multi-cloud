@@ -1,0 +1,34 @@
+[
+    {
+        "TableName": "T_customers",
+        "Location": "LOCAL"
+    },
+    {
+        "TableName": "T_geolocation",
+        "Location": "LOCAL"
+    },
+    {
+        "TableName": "T_order_reviews",
+        "Location": "LOCAL"
+    },
+    {
+        "TableName": "T_sellers",
+        "Location": "LOCAL"
+    },
+    {
+        "TableName": "T_order_items",
+        "Location": "REMOTE"
+    },
+    {
+        "TableName": "T_order_payments",
+        "Location": "REMOTE"
+    },
+    {
+        "TableName": "T_orders",
+        "Location": "REMOTE"
+    },
+    {
+        "TableName": "T_products",
+        "Location": "REMOTE"
+    }
+]

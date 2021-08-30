@@ -1,0 +1,5 @@
+runtime: python38
+service: default
+
+env_variables:
+  FLASK_APP: main.py

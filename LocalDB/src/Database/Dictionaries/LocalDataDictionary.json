@@ -1,0 +1,129 @@
+{
+"DatabaseLocation": "LOCAL",
+"TableDetails": [
+    {
+        "TableName": "T_customers",
+        "ColumnDetails": [
+            {
+                "ColumnName": "customer_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "Y",
+                "FK": ""
+            },
+            {
+                "ColumnName": "customer_unique_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "customer_zip_code_prefix",
+                "DataType": "VARCHAR(100)",
+                "PK": "",
+                "FK": "Y"
+            }
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "customer_zip_code_prefix",
+                "pkColumnName": "geolocation_zip_code_prefix",
+                "pkTableName": "T_geolocation"
+            }
+        ]
+    },
+    {
+        "TableName": "T_geolocation",
+        "ColumnDetails": [
+            {
+                "ColumnName": "geolocation_zip_code_prefix",
+                "DataType": "VARCHAR(100)",
+                "PK": "Y",
+                "FK": ""
+            },
+            {
+                "ColumnName": "geolocation_city",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "geolocation_state",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+        ],
+        "Constraints":[]
+    },
+    {
+        "TableName": "T_order_reviews",
+        "ColumnDetails": [
+            {
+                "ColumnName": "review_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "order_id",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": "Y"
+            },
+            {
+                "ColumnName": "review_score",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "review_comment_title",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            },
+            {
+                "ColumnName": "review_comment_message",
+                "DataType": "TEXT",
+                "PK": "",
+                "FK": ""
+            }
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "order_id",
+                "pkColumnName": "order_id",
+                "pkTableName": "T_orders"
+            }
+        ]
+    },
+    {
+        "TableName": "T_sellers",
+        "ColumnDetails": [
+            {
+                "ColumnName": "seller_id",
+                "DataType": "VARCHAR(100)",
+                "PK": "Y",
+                "FK": ""
+            },
+            {
+                "ColumnName": "seller_zip_code_prefix",
+                "DataType": "VARCHAR(100)",
+                "PK": "",
+                "FK": "Y"
+            }
+        ],
+        "Constraints":[
+            {
+                "ConstraintName": "FK_RELATION",
+                "fkColumnName": "seller_zip_code_prefix",
+                "pkColumnName": "geolocation_zip_code_prefix",
+                "pkTableName": "T_geolocation"
+            }
+        ]
+
+    }
+]
+}
