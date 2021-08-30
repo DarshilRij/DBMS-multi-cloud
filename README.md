@@ -1,5 +1,3 @@
-# CSCI-5408-W2021-Group 5
-
 ### Requirements:
 - python3.9
   - For setup instructions: https://www.liquidweb.com/kb/how-to-setup-a-python-virtual-environment-on-windows-10/
@@ -7,7 +5,7 @@
 
 ### Steps before you start:
 - Clone repository.
-- `cd csci-5408-w2021-group-5`
+- `cd DBMS-multi-cloud`
 - Setup your virtualenv
   - `virtualenv env --python=python3.9`
 - Activate virtualenv
